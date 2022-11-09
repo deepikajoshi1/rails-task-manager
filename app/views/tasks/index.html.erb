@@ -1,2 +1,9 @@
 <h1> Tasks </h1>
-<%= @tasks %>
+<ul>
+<%= link_to(@task).each do |task| %>
+<li><%= task.title %></li>
+<% end %>
+</ul>
+
+  <%# tasks_path(@task),
+  data: {turbo_method: :patch, turbo_confirm: "Are you sure?"} %>
